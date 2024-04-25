@@ -1,0 +1,18 @@
+{
+  "name": "stroer_back",
+  "version": "1.0.0",
+  "description": "Technical Test for Ströer",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node --watch ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Santiago Sosa Diaz",
+  "license": "ISC",
+  "dependencies": {
+    "@redis/client": "^1.5.14",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "redis": "^4.6.13"
+  }
+}
