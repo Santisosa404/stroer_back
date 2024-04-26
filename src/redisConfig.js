@@ -9,15 +9,10 @@ const client = redis.createClient({
   socket: testSocket,
 });
 
-(async () => {
+async function createClient(){
   await client.connect();
-})();
+}
 
-client.on("ready", () => {
-  console.log("Connected to redis");
-});
-client.on("error", (error) => {
-  console.log(error, "error on redis");
-});
+createClient();
 
 module.exports = client;

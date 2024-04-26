@@ -1,7 +1,7 @@
 const {updateCount} = require("../controllers/countController");
 const fs = require("fs");
-const dataFilePath = "data/data.json";
-function readFile() {
+
+function readFile(dataFilePath) {
   try {
     const existingData = JSON.parse(fs.readFileSync(dataFilePath));
     return existingData;
@@ -10,9 +10,9 @@ function readFile() {
   }
 }
 
-async function addDataToFile(data) {
+async function addDataToFile(data, dataFilePath) {
   try {
-    const readedFile = readFile();
+    const readedFile = readFile(dataFilePath);
     if (data.count) {
       await updateCount(data.count);
     }

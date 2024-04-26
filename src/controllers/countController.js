@@ -13,7 +13,7 @@ async function getCountController(req, res) {
   }
 }
  async function updateCount(count) {
-   client.incrBy("count", count);
+   await client.incrBy("count", count);
  }
 
 module.exports = { getCountController, updateCount };
